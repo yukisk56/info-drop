@@ -1,0 +1,26 @@
+:root {
+  /* colors */
+  --white: white;
+  --grey-200: #edf3f7;
+  --grey-300: #e0e8f0;
+  --grey-500: #9faebf;
+  --grey-600: #738195;
+  --grey-900: #1d2a37;
+  --red-700: #cb2d34;
+  --green-700: #14855d;
+  --blue-100: #e7f6fe;
+  --blue-200: #c5e6fd;
+  --blue-300: #91cbfc;
+  --blue-400: #63b6fb;
+  --blue-500: #028ff5;
+  --blue-600: #297fd0;
+  /* other */
+  --font-medium: 500;
+}
+
+.app {
+  padding: 0 1em;
+  color: var(--grey-900);
+  max-width: 80em;
+  margin: 0 auto;
+}

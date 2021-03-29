@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 1px solid var(--grey-300);
+  padding: 1.25em 0 1em;
+}
+
+.header h1 {
+  font-size: 1.125em;
+  font-weight: var(--font-medium);
+}
+
+.header p {
+  color: var(--grey-600);
+  padding-top: 0.25em;
+}

@@ -1,0 +1,20 @@
+.date-input-group {
+    margin-top: 24px;
+}
+
+.date-input-group > div > input {
+    width: 64px;
+}
+
+.date-input-group > div > input {
+    margin-right: 16px;
+}
+
+.date-input-group-fields {
+    display: flex;
+    margin-top: 8px;    
+}
+
+.date-input-group-fields .button {
+    order: 1;
+}

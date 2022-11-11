@@ -1,0 +1,7 @@
+.input-group {
+    width: 100%;
+    margin-top: 40px;
+}
+.input-group .tag {
+    margin-left: 12px;
+}

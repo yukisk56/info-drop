@@ -1,0 +1,33 @@
+input {
+    padding: 12px;
+    border: 1px solid #9FAEBF;
+    border-radius: 4px;
+}
+
+.input-field {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+
+    width: 100%;
+    height: 43px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Grey-500 */
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0; 
+}

@@ -4,7 +4,7 @@ import Splash from "./pages/Splash/Splash";
 import Create from "./pages/Create/Create";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="app" data-testid="App">

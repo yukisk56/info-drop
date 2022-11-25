@@ -6,14 +6,21 @@ import Link from "../../components/Link/Link";
 import Button from "../../components/Button/Button";
 import DateInputGroup from "../../components/Form/DateInputGroup/DateInputGroup";
 import InputGroup from "../../components/Form/InputGroup/InputGroup";
-import "./Create.css";
+import classes from "./Create.module.css";
+import { useHistory } from 'react-router-dom'
 
 const Create = () => {
+    const history = useHistory()
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = async data => { console.log("here",data); };
+
+    const onSubmit = async data => {
+        console.log("here",data);
+        history.push('/preview')
+    };
+
 
     return (
-        <div className="create">
+        <div className={classes.create}>
             <Header title="New Rumour" subtitle="Enter the details of the rumour you heard" />
             <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -23,7 +30,7 @@ const Create = () => {
                 <InputGroup key="currency-code" label="In what currency?" placeholder="Currency code" name="currencyCode" register={register} error={errors.currencyCode} />
                 <InputGroup key="codename" label="Source codename" placeholder="codename" name="codename" register={register} error={errors.codename} />
 
-                <div className="create__links">
+                <div className={classes.create__links}>
                     <Link label="Discard" to="/" iconBefore="chevronLeft" variant="secondary" />
                     <Button label="Validate and preview" variant="primary" type="submit" onClick={() => {}} />
                 </div>

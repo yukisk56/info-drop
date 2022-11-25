@@ -4,11 +4,11 @@ import Button from '../../Button/Button'
 import Label from "../../Label/Label"
 import StatusMessage from "../../StatusMessage/StatusMessage";
 
-import './DateInputGroup.css'
+import classes from './DateInputGroup.module.css'
 
 const DateInputGroup = ({ register, error }) => {
     return (
-        <div className="date-input-group">
+        <div className={classes.dateInputGroup}>
             <Label text="When did you hear it?" />
             <div className="date-input-group-fields">
                 <input placeholder="dd" name="date" type="number" label="Day" {...register('date', { required: 'The field is required'})} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import Header from "../../components/Header/Header";
@@ -24,17 +24,16 @@ const Create = () => {
         })
     };
 
-
     return (
         <div className={classes.create}>
             <Header title="New Rumour" subtitle="Enter the details of the rumour you heard" />
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <DateInputGroup register={register} error={errors} />
-                <InputGroup key="company-name" label="What company was it about?" placeholder="Company Name" name="companyName" isRequired register={register} error={errors.companyName}/>
-                <InputGroup key="million" label="How many millions?" placeholder="999.999" name="million" register={register} error={errors.million} />
-                <InputGroup key="currency-code" label="In what currency?" placeholder="Currency code" name="currencyCode" register={register} error={errors.currencyCode} />
-                <InputGroup key="codename" label="Source codename" placeholder="codename" name="codename" register={register} error={errors.codename} />
+                <InputGroup key="company-name" label="What company was it about?" placeholder="Company Name" name="companyName" isRequired register={register} error={errors.companyName} value={data?.companyName} />
+                <InputGroup key="million" label="How many millions?" placeholder="999.999" name="million" register={register} error={errors.million} value={data?.million} />
+                <InputGroup key="currency-code" label="In what currency?" placeholder="Currency code" name="currencyCode" register={register} error={errors.currencyCode} value={data?.currencyCode} />
+                <InputGroup key="codename" label="Source codename" placeholder="codename" name="codename" register={register} error={errors.codename} value={data?.codename} />
 
                 <div className={classes.create__links}>
                     <Link label="Discard" to="/" iconBefore="chevronLeft" variant="secondary" />

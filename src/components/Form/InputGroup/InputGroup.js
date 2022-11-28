@@ -6,7 +6,7 @@ import Tag from "../../Tag/Tag";
 import StatusMessage from "../../StatusMessage/StatusMessage";
 import "./InputGroup.css";
 
-const InputGroup = ({ placeholder, name, label, isRequired, register, error }) => {
+const InputGroup = ({ placeholder, name, label, isRequired, register, error, value }) => {
   return (
     <div className="input-group">
         <Label text={label} />
@@ -16,6 +16,7 @@ const InputGroup = ({ placeholder, name, label, isRequired, register, error }) =
           name={name} 
           register={register}
           isRequired={isRequired}
+          value={value}
         />
         { error && <StatusMessage label="This field is required" variant="error"/> }
     </div>
@@ -31,6 +32,7 @@ InputGroup.propTypes = {
     showTag: PropTypes.bool,
     register: PropTypes.func,
     error: PropTypes.object,
+    value: PropTypes.string,
 };
 
 InputGroup.defaultProps = {
@@ -39,5 +41,6 @@ InputGroup.defaultProps = {
     label: undefined,
     showTag: false,
     register: undefined,
-    error: undefined
+    error: undefined,
+    value: undefined,
 }

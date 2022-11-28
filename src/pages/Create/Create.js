@@ -11,11 +11,19 @@ import { useHistory } from 'react-router-dom'
 
 const Create = () => {
     const history = useHistory()
+    const data = history.location.state?.data
+    console.log('passed to create', data)
+
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = async data => {
         console.log("here",data);
-        history.push('/preview')
+        history.push({
+            pathname: '/preview',
+            state: {
+                data
+            }
+        })
     };
 
 

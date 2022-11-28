@@ -18,7 +18,10 @@ export default Link;
 Link.propTypes = {
   label: PropTypes.string.isRequired,
   iconBefore: PropTypes.string,
-  to: PropTypes.string.isRequired,
+  to: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]).isRequired,
   variant: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
 };
 

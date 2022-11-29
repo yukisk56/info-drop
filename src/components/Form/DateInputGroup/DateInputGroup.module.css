@@ -10,11 +10,26 @@
     margin-right: 16px;
 }
 
-.date-input-group-fields {
+.dateInputGroupFields {
     display: flex;
     margin-top: 8px;    
 }
 
-.date-input-group-fields .button {
-    order: 1;
+.dateInputGroupFieldsInput {
+    width: 64px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dateInputGroupFieldsInput > input {
+    width: 100%;
+}
+
+.dateInputGroupFieldsInput > label {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #738195;
+    margin-bottom: 8px;
 }
